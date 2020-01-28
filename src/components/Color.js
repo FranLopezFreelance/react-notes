@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Color({ changeColor, color, selectedColor }) {
 
-    //Función para setear el state al seleccionar el color
+    //Escucho el cambio de color y lo paso a la lista de colores
     const selectColor = (color) => {
         changeColor(color)
     }

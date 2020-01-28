@@ -5,7 +5,7 @@ import { navigate, Link } from '@reach/router'
 import { MdDone, MdKeyboardBackspace } from 'react-icons/md'
 
 export default function AddNote() {
-    //Vinculo el estado global con las acciones y valores del componente
+    //Tomo el estate y dispatch de context
     const { state, dispatch } = useContext(NotesContext)
     //Uso “desestructuración de arrays” para setear el valor de text y color en el state
     const [ text, setText ] = useState('')

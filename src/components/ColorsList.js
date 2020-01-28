@@ -8,7 +8,7 @@ export default function NotesList({ handleChangeColor, initColor }) {
     //uso destructuración de arrays para definir variable de estado interno con su seter
     const [selectedColor, setSelectedColor] = useState(initColor)
 
-    //Escucho el cambio de color
+    //Escucho el cambio de color y lo paso al form
     const changeColor = (color) => {
         setSelectedColor(color)
         handleChangeColor(color)
