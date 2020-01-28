@@ -6,8 +6,7 @@ const NotesContext = React.createContext({
     notes: [{
         id: 1,
         text: 'Hola Mundo!',
-        background: '#EDBBBB',
-        colorId: 1
+        background: '#EDBBBB'
     }],
     selectedNote: null
 })
