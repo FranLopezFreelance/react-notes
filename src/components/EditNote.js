@@ -70,7 +70,8 @@ export default function EditNote(){
                     type="hidden" 
                     value={color} 
                     onChange={handleChangeColor} /> 
-                <textarea 
+                <textarea
+                    style={{background: color}} 
                     rows="7"
                     ref={ref} 
                     placeholder="Editar Nota"

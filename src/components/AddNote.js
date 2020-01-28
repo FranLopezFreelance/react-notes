@@ -64,6 +64,7 @@ export default function AddNote() {
                     value={color} 
                     onChange={handleChangeColor} /> 
                 <textarea 
+                    style={{background: color}} 
                     rows="7"
                     ref={ref} 
                     placeholder="Texto ..."
