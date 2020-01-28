@@ -88,8 +88,9 @@ textarea {
   width: 94%;
   margin: 10px auto;
   resize: none;
-  padding: 6px 10px;
+  padding: 20px 10px;
   font-size: 1.4em;
+  outline:none !important;
 }
 
 .notes {
