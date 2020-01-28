@@ -14,7 +14,6 @@ export default function NoteDetail(){
                 <p>{state.selectedNote.text}</p>
             </div>
         </div>
-        
     )
 }
     

@@ -24,9 +24,8 @@ function App() {
         <AddNote path='/add' />
         <EditNote path='/edit' />
       </Router>
-      
     </NotesContext.Provider>
-  );
+  )
 }
 
-export default App;
+export default App

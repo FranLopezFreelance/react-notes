@@ -19,7 +19,7 @@ export default function AddNote() {
     }, [])
 
     //Función para setear el state al seleccionar el color
-    function selectColor(selectedColor, id){
+    const selectColor = (selectedColor) => {
         setColor(selectedColor)
     }
 
