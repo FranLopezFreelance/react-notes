@@ -2,10 +2,8 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* .App-logo {
+} */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,15 +11,8 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.title, .App-logo {
+  vertical-align: middle;
 }
 
 .App-link {
@@ -35,4 +26,149 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.container {
+  padding: 15px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  background: #32363E;
+  color: #fff;
+  margin: 0px auto 0px;
+  padding: 5px 10px 0px;
+  font-size: 1.5em;
+}
+
+.add {
+  margin-left: 20px;
+  vertical-align: middle;
+  cursor: pointer;
+  color: rgb(180, 253, 180);
+  text-decoration: none;
+}
+
+.add-button {
+  border: none;
+  background:transparent;
+  color: rgb(16, 134, 52);
+  cursor: pointer;
+  font-size: 1.9em;
+  outline: none;
+}
+
+.return {
+  color: rgb(46, 67, 126);
+  cursor: pointer;
+  font-size: 1.9em;
+  margin-left: 15px;
+}
+
+.edit {
+  font-size: 1.5em;
+  vertical-align: middle;
+  cursor: pointer;
+  color: rgb(5, 111, 143);
+  margin-right: 8px;
+}
+
+.del {
+  margin-left: 2px;
+  font-size: 1.5em;
+  vertical-align: middle;
+  cursor: pointer;
+  color: rgb(167, 80, 80);
+}
+
+form {
+  padding: 0px 10px;
+}
+
+textarea {
+  display: flex;
+  width: 94%;
+  margin: 10px auto;
+  resize: none;
+  padding: 6px 10px;
+  font-size: 1.4em;
+}
+
+.notes {
+  width: 68%;
+  float: right;
+}
+
+.note-container {
+  position: relative;
+}
+
+.actions {
+  position: absolute;
+  top: 0px;
+  right: 11px;
+  padding: 6px;
+  z-index: 999;
+}
+
+.note {
+  display: flex;
+  border: 1px solid silver;
+  border-radius: 2px;
+  margin: 8px 10px;
+  padding: 0px 8px;
+  position: relative;  
+  cursor: pointer;
+  z-index: 99;
+}
+
+.note-detail {
+  display: flex;
+  border: 1px solid silver;
+  border-radius: 2px;
+  margin: 0px 10px;
+  padding: 0px 8px;
+  font-size: 1.4em;
+}
+
+.note p {
+  font-size: 1.3em;
+}
+
+/*  COLORS */
+.colors {
+  margin: 10px 15px;
+}
+
+.color {
+  display: inline-block;
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  margin: 0px 8px;
+}
+
+.red {
+  background-color:#EDBBBB;
+}
+
+.orange {
+  background-color:#EAD2BF;
+}
+
+.yellow {
+  background-color: #EDECBB;
+}
+
+.green {
+  background-color:#C8EBBF;
+}
+
+.blue {
+  background-color: #BBD0ED;
+}
+
+.selected {
+  border: 1px solid black;
 }
