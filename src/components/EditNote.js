@@ -26,7 +26,7 @@ export default function EditNote(){
     }
 
     //Función para setear el state al seleccionar el color
-    function selectColor(selectedColor){
+    const selectColor = (selectedColor) => {
         setColor(selectedColor)
     }
 

@@ -6,6 +6,7 @@ import { MdModeEdit, MdDelete } from 'react-icons/md'
 export default function Note({ note }) {
     //Vinculo el estado global con las acciones del componente
     const { dispatch } = useContext(NotesContext)
+
     const selectNote = () => {
         dispatch({ type: 'SELECT_NOTE', payload: note })
         navigate('/note-detail')

@@ -26,7 +26,7 @@ function App() {
       </Router>
       
     </NotesContext.Provider>
-  );
+  )
 }
 
-export default App;
+export default App
