@@ -1,5 +1,6 @@
 import React, { useContext, useState, useRef, useEffect } from 'react'
 import NotesContext from '../context'
+import ColorsList from './ColorsList.js'
 import { navigate, Link } from '@reach/router'
 import { MdDone, MdKeyboardBackspace } from 'react-icons/md'
 
@@ -9,7 +10,7 @@ export default function EditNote(){
     //Uso “desestructuración de arrays” para setear el valor de text y color en el state
     const [ text, setText ] =  useState(state.selectedNote.text)
     const [ color, setColor ] = useState(state.selectedNote.background)
-    
+
     //Preparo el ref para definir el elemente de referencia
     let ref = useRef()
 
@@ -25,18 +26,13 @@ export default function EditNote(){
         event.target.value = temp_value
     }
 
-    //Función para setear el state al seleccionar el color
-    const selectColor = (selectedColor) => {
-        setColor(selectedColor)
-    }
-
     //Handle de cambios del text, color y click del submit
     const handleChangeText = (event) => {
         setText(event.target.value)
     }
 
-    const handleChangeColor = (event) => {
-        setColor(event.target.value)
+    const handleChangeColor = (color) => {
+        setColor(color)
     }
 
     const handleSubmit = (event) => {
@@ -53,23 +49,8 @@ export default function EditNote(){
 
     return (
         <div className="formNote">
-            <div className="colors">
-                <span onClick={() => selectColor('#EDBBBB')} 
-                    className={"red color " + ((color==='#EDBBBB')? "selected":"")}></span>
-                <span onClick={() => selectColor('#EAD2BF')} 
-                    className={"orange color " + ((color==='#EAD2BF')? "selected":"")}></span>
-                <span onClick={() => selectColor('#EDECBB')} 
-                    className={"yellow color " + ((color==='#EDECBB')? "selected":"")}></span>
-                <span onClick={() => selectColor('#C8EBBF')} 
-                    className={"green color " + ((color==='#C8EBBF')? "selected":"")}></span>
-                <span onClick={() => selectColor('#BBD0ED')} 
-                    className={"blue color " + ((color==='#BBD0ED')? "selected":"")}></span>
-            </div>
+            <ColorsList handleChangeColor={handleChangeColor} initColor={color} />
             <form onSubmit={handleSubmit} action="">
-                <input 
-                    type="hidden" 
-                    value={color} 
-                    onChange={handleChangeColor} /> 
                 <textarea
                     style={{background: color}} 
                     rows="7"

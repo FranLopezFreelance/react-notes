@@ -26,13 +26,21 @@ export default function reducer(state, action){
                 text: action.payload.text,
                 background: action.payload.color
             }
+            console.log(updatedNote)
             let updateNoteIndex = state.notes.findIndex(note => note.id === state.selectedNote.id)
             let updateNotesList = [
                 ...state.notes.slice(0, updateNoteIndex),
                 updatedNote,
                 ...state.notes.slice(updateNoteIndex + 1)
             ]
+            let test = {
+                ...state,
+                selectedNote: updatedNote,
+                notes: updateNotesList
+            }
+            console.log(test)
             return {
+                ...state,
                 selectedNote: updatedNote,
                 notes: updateNotesList
             }
@@ -42,6 +50,12 @@ export default function reducer(state, action){
             return {
                 ...state,
                 notes: deleteNotesList
+            }
+        //Si se selecciona un color
+        case 'SELECT_COLOR':
+            return {
+                ...state,
+                selectedColor: action.payload
             }
         default:
             return state 
