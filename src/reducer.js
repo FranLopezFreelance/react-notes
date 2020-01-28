@@ -26,19 +26,12 @@ export default function reducer(state, action){
                 text: action.payload.text,
                 background: action.payload.color
             }
-            console.log(updatedNote)
             let updateNoteIndex = state.notes.findIndex(note => note.id === state.selectedNote.id)
             let updateNotesList = [
                 ...state.notes.slice(0, updateNoteIndex),
                 updatedNote,
                 ...state.notes.slice(updateNoteIndex + 1)
             ]
-            let test = {
-                ...state,
-                selectedNote: updatedNote,
-                notes: updateNotesList
-            }
-            console.log(test)
             return {
                 ...state,
                 selectedNote: updatedNote,
